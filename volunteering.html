@@ -2,73 +2,140 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="A website about...">
-  <!-- Link external CSS stylesheet at the top of any HTML file -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catalina Huynh's volunteering, mentoring, and tutoring experience in the Boston area.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Google Fonts section: leave empty with fallback in CSS similar to Times New Roman -->
-  <!-- <link href="" rel="stylesheet"> -->
-
-  <!-- Title must have two parts in child-parent formation; last tag in head -->
-  <title>Home | My Website</title>
+  <title>Volunteering | Catalina Huynh</title>
 </head>
 
 <body>
-  <!-- Wrap everything in body with #page-wrapper -->
-  <div id="page-wrapper">
+<div id="page-wrapper">
 
-    <!-- Header starts here -->
-    <header>
-      <h1>Website Title</h1>
-      <p><em>Subtitle</em></p>
-      <!-- Button specifically labeled to change webpage theme from light to dark -->
-      <button id="theme-toggle" type="button">Switch to Dark Mode</button>
-    </header>
-    <!-- Header ends here -->
-
-    <!-- Wrap NAV and MAIN together in a single #container -->
-    <div id="container">
-
-      <!-- Navigation starts here -->
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="credits.html">Credits</a></li>
-        </ul>
-      </nav>
-      <!-- Navigation ends here -->
-
-      <!-- Main content starts here -->
-      <main>
-        <h1>Main Content Title</h1>
-
-        <!-- At least 6 internal webpage sections; can be left blank -->
-        <section id="section-1"><h2>Section 1</h2></section>
-        <section id="section-2"><h2>Section 2</h2></section>
-        <section id="section-3"><h2>Section 3</h2></section>
-        <section id="section-4"><h2>Section 4</h2></section>
-        <section id="section-5"><h2>Section 5</h2></section>
-        <section id="section-6"><h2>Section 6</h2></section>
-      </main>
-      <!-- Main content ends here -->
-
+  <header id="site-header">
+    <div id="banner">
+      <h1>Catalina Huynh</h1>
+      <p>My Online Resume</p>
     </div>
-    <!-- #container ends here -->
+  </header>
 
-    <!-- Footer starts here -->
-    <footer>
-      <p>All rights reserved: <a href="credits.html">Credits</a> &#169;</p>
-    </footer>
-    <!-- Footer ends here -->
+  <div id="container">
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="volunteering.html">Volunteering</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="credits.html">Credits</a></li>
+      </ul>
+      <button id="theme-toggle" type="button" aria-label="Switch to Dark Mode">
+        <span class="icon-sun" aria-hidden="true">&#9788;</span>
+        <svg class="icon-moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </nav>
+
+    <main>
+
+      <section class="hero-section">
+        <h2 class="page-title">Volunteering &amp; Mentoring</h2>
+
+        <section>
+          <h3>Volunteer Staff</h3>
+          <p><em>Boston Vietnamese Student Association</em></p>
+          <p>Jan 2015 &ndash; Present &middot; 11 yrs 9 mos &middot; Social Services</p>
+          <p>
+            Planned and facilitated events for entertainment, set up and managed booths, worked as a
+            backstage assistant, and personally performed at concert venues for T&#7871;t festivals in
+            the Boston area. Additionally fundraising, donating non-cash items to charities, and
+            volunteering within my community when available.
+          </p>
+        </section>
+      </section>
+
+      <section class="rest-section">
+
+        <section>
+          <h3>Mentoring &amp; Academic Tutor</h3>
+          <p><em>Blue Hills Regional Technical School</em></p>
+          <p>Sep 2019 &ndash; Aug 2026 &middot; 7 yrs &middot; Education</p>
+          <p>
+            Personal tutor for fellow students and those in need with academic subjects such as
+            Calculus, Physics, and Chemistry. Additionally provided lessons on networking and hardware
+            repair.
+          </p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>Tutor &amp; Programming Instructor</h3>
+          <p><em>Randolph Community Middle School</em></p>
+          <p>Aug 2016 &ndash; Jun 2019 &middot; 2 yrs 11 mos &middot; Education</p>
+          <p>Programming Languages Taught:</p>
+          <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Scratch</li>
+          </ul>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>Club Volunteer</h3>
+          <p><em>Randolph Community Middle School</em></p>
+          <p>Aug 2016 &ndash; Jun 2019 &middot; 2 yrs 11 mos &middot; Education</p>
+          <p>Active volunteer for clubs such as the Drama club and Cross Country.</p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>Top Peer Mentor</h3>
+          <p><em>Boston University</em></p>
+          <p>Jan 2025 &ndash; Present &middot; 1 yr 9 mos &middot; Education</p>
+          <ul>
+            <li>
+              Mentored 50+ students in systems programming (C, assembly), delivering multi-session
+              workshops that raised average grades from 50% to 100% through targeted problem-solving
+              and concept reviews.
+            </li>
+            <li>
+              Debugged students' code in real-time sessions, fixing critical errors 5&times; faster than
+              department average.
+            </li>
+            <li>Recognized by Head TA Matias for "Most Impactful Mentor".</li>
+          </ul>
+        </section>
+
+      </section>
+
+    </main>
 
   </div>
-  <!-- #page-wrapper ends here -->
 
-  <!-- Link external JavaScript file -->
-  <script src="scripts.js"></script>
+  <footer>
+    <p>
+      All rights reserved: <a href="credits.html">Credits</a> &#169;
+      | Last Updated: September 21st, 2026
+    </p>
+  </footer>
+
+</div>
+
+<script src="scripts.js"></script>
 </body>
 </html>

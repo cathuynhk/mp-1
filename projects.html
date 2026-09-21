@@ -2,73 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="A website about...">
-  <!-- Link external CSS stylesheet at the top of any HTML file -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catalina Huynh's projects page featuring a JavaScript calculator.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Google Fonts section: leave empty with fallback in CSS similar to Times New Roman -->
-  <!-- <link href="" rel="stylesheet"> -->
-
-  <!-- Title must have two parts in child-parent formation; last tag in head -->
-  <title>Home | My Website</title>
+  <title>Projects | Catalina Huynh</title>
 </head>
 
 <body>
-  <!-- Wrap everything in body with #page-wrapper -->
-  <div id="page-wrapper">
+<div id="page-wrapper">
 
-    <!-- Header starts here -->
-    <header>
-      <h1>Website Title</h1>
-      <p><em>Subtitle</em></p>
-      <!-- Button specifically labeled to change webpage theme from light to dark -->
-      <button id="theme-toggle" type="button">Switch to Dark Mode</button>
-    </header>
-    <!-- Header ends here -->
-
-    <!-- Wrap NAV and MAIN together in a single #container -->
-    <div id="container">
-
-      <!-- Navigation starts here -->
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="credits.html">Credits</a></li>
-        </ul>
-      </nav>
-      <!-- Navigation ends here -->
-
-      <!-- Main content starts here -->
-      <main>
-        <h1>Main Content Title</h1>
-
-        <!-- At least 6 internal webpage sections; can be left blank -->
-        <section id="section-1"><h2>Section 1</h2></section>
-        <section id="section-2"><h2>Section 2</h2></section>
-        <section id="section-3"><h2>Section 3</h2></section>
-        <section id="section-4"><h2>Section 4</h2></section>
-        <section id="section-5"><h2>Section 5</h2></section>
-        <section id="section-6"><h2>Section 6</h2></section>
-      </main>
-      <!-- Main content ends here -->
-
+  <header id="site-header">
+    <div id="banner">
+      <h1>Catalina Huynh</h1>
+      <p>My Online Resume</p>
     </div>
-    <!-- #container ends here -->
+  </header>
 
-    <!-- Footer starts here -->
-    <footer>
-      <p>All rights reserved: <a href="credits.html">Credits</a> &#169;</p>
-    </footer>
-    <!-- Footer ends here -->
+  <div id="container">
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="volunteering.html">Volunteering</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="credits.html">Credits</a></li>
+      </ul>
+      <button id="theme-toggle" type="button" aria-label="Switch to Dark Mode">
+        <span class="icon-sun" aria-hidden="true">&#9788;</span>
+        <svg class="icon-moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </nav>
+
+    <main>
+
+      <section class="hero-section">
+        <h2 class="page-title">Projects</h2>
+
+        <section id="project-list">
+          <h3>Other Projects</h3>
+          <p>Space reserved for future project links and GitHub repositories.</p>
+        </section>
+      </section>
+
+      <section class="rest-section">
+
+        <section id="calculator">
+          <h3>JavaScript Calculator</h3>
+
+          <div class="calc-inputs">
+            <div class="calc-field">
+              <label for="first-number">First Number</label>
+              <input type="text" id="first-number">
+            </div>
+
+            <div class="calc-field">
+              <label for="second-number">Second Number</label>
+              <input type="text" id="second-number">
+            </div>
+          </div>
+
+          <div class="calc-buttons">
+            <button type="button" onclick="addition()">+</button>
+            <button type="button" onclick="subtraction()">-</button>
+            <button type="button" onclick="multiplication()">*</button>
+            <button type="button" onclick="division()">/</button>
+            <button type="button" onclick="power()">**</button>
+            <button type="button" onclick="clearCalc()">Clear</button>
+          </div>
+
+          <div class="calc-output">
+            <h3 id="output"></h3>
+          </div>
+        </section>
+
+      </section>
+
+    </main>
 
   </div>
-  <!-- #page-wrapper ends here -->
 
-  <!-- Link external JavaScript file -->
-  <script src="scripts.js"></script>
+  <footer>
+    <p>
+      All rights reserved: <a href="credits.html">Credits</a> &#169;
+      | Last Updated: September 21st, 2026
+    </p>
+  </footer>
+
+</div>
+
+<script src="scripts.js"></script>
 </body>
 </html>

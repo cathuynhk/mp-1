@@ -2,73 +2,313 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="A website about...">
-  <!-- Link external CSS stylesheet at the top of any HTML file -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catalina Huynh's licenses and certifications in IT, cybersecurity, programming, safety, and emergency medical services.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Google Fonts section: leave empty with fallback in CSS similar to Times New Roman -->
-  <!-- <link href="" rel="stylesheet"> -->
-
-  <!-- Title must have two parts in child-parent formation; last tag in head -->
-  <title>Home | My Website</title>
+  <title>Certifications | Catalina Huynh</title>
 </head>
 
 <body>
-  <!-- Wrap everything in body with #page-wrapper -->
-  <div id="page-wrapper">
+<div id="page-wrapper">
 
-    <!-- Header starts here -->
-    <header>
-      <h1>Website Title</h1>
-      <p><em>Subtitle</em></p>
-      <!-- Button specifically labeled to change webpage theme from light to dark -->
-      <button id="theme-toggle" type="button">Switch to Dark Mode</button>
-    </header>
-    <!-- Header ends here -->
-
-    <!-- Wrap NAV and MAIN together in a single #container -->
-    <div id="container">
-
-      <!-- Navigation starts here -->
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="credits.html">Credits</a></li>
-        </ul>
-      </nav>
-      <!-- Navigation ends here -->
-
-      <!-- Main content starts here -->
-      <main>
-        <h1>Main Content Title</h1>
-
-        <!-- At least 6 internal webpage sections; can be left blank -->
-        <section id="section-1"><h2>Section 1</h2></section>
-        <section id="section-2"><h2>Section 2</h2></section>
-        <section id="section-3"><h2>Section 3</h2></section>
-        <section id="section-4"><h2>Section 4</h2></section>
-        <section id="section-5"><h2>Section 5</h2></section>
-        <section id="section-6"><h2>Section 6</h2></section>
-      </main>
-      <!-- Main content ends here -->
-
+  <header id="site-header">
+    <div id="banner">
+      <h1>Catalina Huynh</h1>
+      <p>My Online Resume</p>
     </div>
-    <!-- #container ends here -->
+  </header>
 
-    <!-- Footer starts here -->
-    <footer>
-      <p>All rights reserved: <a href="credits.html">Credits</a> &#169;</p>
-    </footer>
-    <!-- Footer ends here -->
+  <div id="container">
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="volunteering.html">Volunteering</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="credits.html">Credits</a></li>
+      </ul>
+      <button id="theme-toggle" type="button" aria-label="Switch to Dark Mode">
+        <span class="icon-sun" aria-hidden="true">&#9788;</span>
+        <svg class="icon-moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </nav>
+
+    <main>
+
+      <section class="hero-section">
+        <h2 class="page-title">Licenses &amp; Certifications</h2>
+
+        <section>
+          <h3>CompTIA A+</h3>
+          <p><em>CompTIA &middot; Issued Mar 2022</em></p>
+          <p>Credential ID COMP001021681801</p>
+          <p>
+            The CompTIA A+ Certification is a globally recognized, entry-level credential that proves
+            basic technical competency for information technology (IT) support and help desk roles.
+            To earn the certification, you must pass two separate exams (Hardware &amp; Networking and
+            Software &amp; Security).
+          </p>
+        </section>
+      </section>
+
+      <section class="rest-section">
+
+        <section>
+          <h3>CompTIA IT Fundamentals+</h3>
+          <p><em>CompTIA &middot; Issued Jan 2021</em></p>
+          <p>Credential ID COMP001021681801</p>
+          <p>
+            The CompTIA ITF+ (IT Fundamentals) certification is an entry-level credential designed for
+            absolute beginners to learn basic IT concepts, terminology, and skills before pursuing
+            advanced certifications like CompTIA A+.
+          </p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>OSHA General Industry Safety and Health</h3>
+          <p><em>Occupational Safety and Health Administration &middot; Issued Dec 2020</em></p>
+          <p>Credential ID 14-702088507</p>
+          <p>
+            An OSHA General Industry Safety and Health certification is a credential verifying that a
+            worker has completed foundational training in recognizing, avoiding, and preventing
+            workplace hazards in non-construction fields.
+          </p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>Associate (AS) in Java Programming</h3>
+          <p><em>Massasoit Community College &middot; Issued May 2023</em></p>
+          <p>
+            Designed to provide students with tangible, verifiable proof of competency in the Java
+            programming language.
+          </p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>Cisco Cybersecurity Essentials</h3>
+          <p><em>Cisco &middot; Issued Nov 2022</em></p>
+          <p>
+            The Cisco Cybersecurity Essentials program is a foundational course by the Cisco Networking
+            Academy that teaches basic network security, threat analysis, and risk management.
+          </p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>Cisco Introduction to Cybersecurity</h3>
+          <p><em>Cisco &middot; Issued Mar 2020</em></p>
+          <p>
+            The Cisco Introduction to Cybersecurity course is an entry-level program offered through the
+            Cisco Networking Academy that teaches foundational security concepts and awards a digital
+            badge upon completion.
+          </p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>NDG Linux Essentials</h3>
+          <p><em>Cisco &middot; Issued Jan 2023</em></p>
+          <p>
+            The Cisco Networking Academy NDG Linux Essentials is a foundational course that teaches
+            basic Linux operating system skills, command-line operations, and open-source concepts.
+          </p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>NDG Linux Unhatched</h3>
+          <p><em>Cisco &middot; Issued Nov 2022</em></p>
+          <p>
+            The Cisco NDG Linux Unhatched is a beginner's guide to the Linux operating system provided
+            through Cisco Networking Academy in collaboration with the Network Development Group (NDG).
+          </p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>CodeHS Web Design</h3>
+          <p><em>CodeHS &middot; Issued May 2022</em></p>
+          <p>
+            The CodeHS Web Design Level 1 Certification is an industry-recognized exam that validates a
+            student's foundational mastery of HTML, CSS, and core web design concepts.
+          </p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>CodeHS Java</h3>
+          <p><em>CodeHS &middot; Issued Jun 2022</em></p>
+          <p>
+            The CodeHS Java Certification is a secure, online exam that tests and proves a student's
+            foundational understanding of Java programming concepts.
+          </p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>CodeHS JavaScript</h3>
+          <p><em>CodeHS &middot; Issued Feb 2023</em></p>
+          <p>
+            The CodeHS JavaScript Certification is an online, industry-recognized exam that proves a
+            student's foundational understanding of JavaScript programming concepts.
+          </p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>CodeHS Python</h3>
+          <p><em>CodeHS &middot; Issued Apr 2022</em></p>
+          <p>
+            The CodeHS Python Certification is an online exam that proves a student's foundational
+            understanding of Python programming concepts.
+          </p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>CodeHS SQL</h3>
+          <p><em>CodeHS &middot; Issued May 2022</em></p>
+          <p>
+            The CodeHS SQL Certification is an industry-relevant credential that validates a student's
+            foundational knowledge of relational databases and Structured Query Language (SQL).
+          </p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>IT Specialist &amp; Networking</h3>
+          <p><em>Certiport - A Pearson VUE Business &middot; Issued May 2023</em></p>
+          <p>
+            The Certiport IT Specialist - Networking certification is an entry-level credential that
+            validates foundational knowledge of wired and wireless computer networking infrastructure,
+            protocols, and troubleshooting.
+          </p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>Associate (AS) in Python Programming</h3>
+          <p><em>Cisco &middot; Issued Jun 2023</em></p>
+          <p>
+            The PCAP (Certified Associate in Python Programming) is an intermediate-level professional
+            credential offered by the Python Institute in collaboration with the Cisco Networking
+            Academy. It validates your ability to code intermediate-level Python tasks, handle
+            multi-module programs, use object-oriented programming (OOP), and manage file operations.
+          </p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>Marugoto A1-1</h3>
+          <p><em>JF Japanese E-learning &middot; Issued Aug 2022</em></p>
+          <p>
+            The Marugoto A1-1 certification is an official certificate of completion issued by the Japan
+            Foundation (through their JF Japanese e-Learning Minato platform). It proves that a learner
+            has mastered the beginner (Starter A1) level of Japanese communication based on the
+            CEFR-aligned JF Standard.
+          </p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>Basic Life Support (BLS)</h3>
+          <p><em>American Heart Association &middot; Issued Jun 2026 &middot; Expires Jun 2028</em></p>
+          <p>Credential ID 271264670542</p>
+          <p>
+            Basic Life Support (BLS) is a foundational level of medical care used to save lives during
+            life-threatening emergencies like cardiac arrest, respiratory distress, or choking. The
+            American Heart Association (AHA) BLS Certification is a standard credential required for
+            healthcare providers and public safety personnel.
+          </p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>ICS-100</h3>
+          <p><em>FEMA &middot; Issued Jul 2026</em></p>
+          <p>
+            ICS 100, Introduction to the Incident Command System, introduces the Incident Command System
+            (ICS) and provides the foundation for higher level ICS training. This course describes the
+            history, features and principles, and organizational structure of the Incident Command
+            System. It also explains the relationship between ICS and the National Incident Management
+            System (NIMS).
+          </p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>NIMS-700</h3>
+          <p><em>FEMA &middot; Issued Jul 2026</em></p>
+          <p>
+            This course provides an overview of the National Incident Management System (NIMS). The
+            National Incident Management System defines the comprehensive approach guiding the whole
+            community - all levels of government, nongovernmental organizations (NGO), and the private
+            sector - to work together seamlessly to prevent, protect against, mitigate, respond to, and
+            recover from the effects of incidents. The course provides learners with a basic
+            understanding of NIMS concepts, principles, and components.
+          </p>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>Emergency Medical Technician (EMT) - Specialist</h3>
+          <p><em>National Registry of Emergency Medical Technicians &middot; Issued Aug 2026 &middot; Expires Mar 2029</em></p>
+          <p>Credential ID 1975-4878-1358</p>
+          <p>
+            Emergency Medical Technician duly registered together with all the rights and privileges
+            appertaining thereto in consideration of having satisfied the prescribed national standards
+            for certification.
+          </p>
+        </section>
+
+      </section>
+
+    </main>
 
   </div>
-  <!-- #page-wrapper ends here -->
 
-  <!-- Link external JavaScript file -->
-  <script src="scripts.js"></script>
+  <footer>
+    <p>
+      All rights reserved: <a href="credits.html">Credits</a> &#169;
+      | Last Updated: September 21st, 2026
+    </p>
+  </footer>
+
+</div>
+
+<script src="scripts.js"></script>
 </body>
 </html>

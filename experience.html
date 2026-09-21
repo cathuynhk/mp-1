@@ -2,73 +2,230 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="A website about...">
-  <!-- Link external CSS stylesheet at the top of any HTML file -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catalina Huynh's professional experience in information security, IT support, and technical instruction.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Google Fonts section: leave empty with fallback in CSS similar to Times New Roman -->
-  <!-- <link href="" rel="stylesheet"> -->
-
-  <!-- Title must have two parts in child-parent formation; last tag in head -->
-  <title>Home | My Website</title>
+  <title>Experience | Catalina Huynh</title>
 </head>
 
 <body>
-  <!-- Wrap everything in body with #page-wrapper -->
-  <div id="page-wrapper">
+<div id="page-wrapper">
 
-    <!-- Header starts here -->
-    <header>
-      <h1>Website Title</h1>
-      <p><em>Subtitle</em></p>
-      <!-- Button specifically labeled to change webpage theme from light to dark -->
-      <button id="theme-toggle" type="button">Switch to Dark Mode</button>
-    </header>
-    <!-- Header ends here -->
-
-    <!-- Wrap NAV and MAIN together in a single #container -->
-    <div id="container">
-
-      <!-- Navigation starts here -->
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="credits.html">Credits</a></li>
-        </ul>
-      </nav>
-      <!-- Navigation ends here -->
-
-      <!-- Main content starts here -->
-      <main>
-        <h1>Main Content Title</h1>
-
-        <!-- At least 6 internal webpage sections; can be left blank -->
-        <section id="section-1"><h2>Section 1</h2></section>
-        <section id="section-2"><h2>Section 2</h2></section>
-        <section id="section-3"><h2>Section 3</h2></section>
-        <section id="section-4"><h2>Section 4</h2></section>
-        <section id="section-5"><h2>Section 5</h2></section>
-        <section id="section-6"><h2>Section 6</h2></section>
-      </main>
-      <!-- Main content ends here -->
-
+  <header id="site-header">
+    <div id="banner">
+      <h1>Catalina Huynh</h1>
+      <p>My Online Resume</p>
     </div>
-    <!-- #container ends here -->
+  </header>
 
-    <!-- Footer starts here -->
-    <footer>
-      <p>All rights reserved: <a href="credits.html">Credits</a> &#169;</p>
-    </footer>
-    <!-- Footer ends here -->
+  <div id="container">
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="volunteering.html">Volunteering</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="credits.html">Credits</a></li>
+      </ul>
+      <button id="theme-toggle" type="button" aria-label="Switch to Dark Mode">
+        <span class="icon-sun" aria-hidden="true">&#9788;</span>
+        <svg class="icon-moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </nav>
+
+    <main>
+
+      <section class="hero-section">
+        <h2 class="page-title">Professional Experience</h2>
+
+        <section>
+          <h3>Boston University</h3>
+          <p><em>Part-time &middot; 3 yrs 1 mo &middot; Boston, Massachusetts, United States</em></p>
+
+          <h4>Information Security Specialist</h4>
+          <p>Jul 2025 &ndash; Present &middot; 1 yr 3 mos &middot; Hybrid</p>
+          <p><strong>BUMC IS&amp;T: Medical Campus IT for researchers</strong></p>
+          <ul>
+            <li>
+              Implemented and enforced security controls (access control, encryption, and monitoring)
+              for sensitive research databases, ensuring strict confidentiality and integrity standards
+              directly aligned with HIPAA and PHI protection requirements.
+            </li>
+            <li>
+              Executed end-to-end incident response protocols, conducting containment, root-cause
+              analysis, and post-mortem documentation to strengthen security posture and prepare for
+              potential breach notification procedures.
+            </li>
+            <li>
+              Developed and delivered data security awareness training for diverse research and
+              administrative groups, effectively reducing human-error risks by reinforcing secure data
+              classification and handling practices.
+            </li>
+            <li>
+              Collaborated with IT teams to conduct vulnerability scans and apply security patches,
+              ensuring systems remained compliant with institutional and federal data governance policies.
+            </li>
+            <li>
+              Applied security controls to protect sensitive research data and infrastructure, utilizing
+              principles directly transferable to safeguarding Protected Health Information (PHI) in
+              clinical settings.
+            </li>
+            <li>
+              Educated diverse user groups on data security best practices, highlighting the importance
+              of confidentiality and integrity in handling sensitive information.
+            </li>
+          </ul>
+
+          <br>
+
+          <h4>IT Support Specialist</h4>
+          <p>Sep 2023 &ndash; Present &middot; 3 yrs 1 mo &middot; On-site</p>
+          <p><strong>BU IT Help Center: Student Production Services Department &amp; Independent</strong></p>
+          <ul>
+            <li>
+              Provided Tier 1 and Tier 2 technical support for over 400 organizational units,
+              troubleshooting complex hardware, software, and network issues (TCP/IP, DNS, Active
+              Directory) to maintain 99% system availability.
+            </li>
+            <li>
+              Managed IT service desk operations, including incident ticketing, hardware/software
+              inventory tracking, and user access provisioning/de-provisioning to maintain strict
+              audit-ready documentation.
+            </li>
+            <li>
+              Resolved escalated system administration issues on Windows Server, Linux, and virtualized
+              environments (VMware), ensuring seamless integration across on-premise and cloud-based
+              resources.
+            </li>
+            <li>
+              Authored and maintained comprehensive technical documentation and knowledge-base articles,
+              streamlining troubleshooting processes and reducing average resolution time.
+            </li>
+            <li>
+              Managed incoming helpdesk tickets, prioritizing and resolving technical issues for faculty,
+              staff, and students to minimize downtime and maintain productivity.
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <section class="rest-section">
+
+        <section>
+          <h3>Brandeis University &middot; Part-time</h3>
+          <h4>Executive Assistant &amp; Research Associate</h4>
+          <p>Jul 2025 &ndash; Jul 2026 &middot; 1 yr 1 mo</p>
+          <p>Boston, Massachusetts, United States &middot; Remote</p>
+          <ul>
+            <li>
+              Administrative and daily management functions such as communications correspondence,
+              important tax/banking/health documents, task scheduling, reminders, and agenda.
+            </li>
+            <li>
+              Editorial &amp; Literary Specialist serving as a primary editorial collaborator by
+              performing scribe duties, providing alpha-level feedback on narrative structure and core
+              ideas, and conducting beta reading for pacing, clarity, and audience impact on various
+              manuscripts and articles.
+            </li>
+            <li>
+              Private Research Assistant in subjects such as political science, sports, weather,
+              movies &amp; media, and history.
+            </li>
+          </ul>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>Hanson Luxury Nail Bar &middot; Full-time</h3>
+          <h4>Administrative Manager</h4>
+          <p>May 2025 &ndash; Aug 2025 &middot; 4 mos</p>
+          <p>Hanson, Massachusetts, United States &middot; Remote</p>
+          <ul>
+            <li>
+              Manage daily appointments via calls and booking software, resolving scheduling conflicts
+              and optimizing technician workflows to reduce client wait times.
+            </li>
+            <li>
+              Serve as primary English-Vietnamese translator for clients and staff, ensuring accurate
+              communication on services, pricing, and aftercare instructions.
+            </li>
+          </ul>
+        </section>
+
+        <br>
+
+        <section>
+          <h3>Blue Hills Regional Technical School &middot; Part-time &middot; 2 yrs</h3>
+          <p>Canton, Massachusetts, United States &middot; On-site</p>
+
+          <h4>Junior IT Technical Support</h4>
+          <p>Sep 2021 &ndash; Aug 2023 &middot; 2 yrs</p>
+          <ul>
+            <li>
+              Accurately processed customer tickets and data from faculty, staff, and students,
+              prioritizing issues to deliver prompt resolutions that enhanced user satisfaction and
+              operational efficiency.
+            </li>
+            <li>
+              Assisted in data entry and documentation, ensuring accurate records for IT asset management.
+            </li>
+            <li>
+              Conducted routine maintenance and software patching on computer systems, collaborating with
+              a team of three senior IT professionals to perform weekly device and system inspections,
+              ensuring peak performance and robust security.
+            </li>
+          </ul>
+
+          <br>
+
+          <h4>Teacher Assistant &mdash; IT &amp; Coding Instructor</h4>
+          <p>Sep 2021 &ndash; Aug 2023 &middot; 2 yrs</p>
+          <ul>
+            <li>
+              Delivered comprehensive training sessions on hardware, software, and programming
+              fundamentals to junior students, fostering the development of technical skills and
+              knowledge through personalized support and customized instructional materials.
+            </li>
+            <li>
+              Facilitated the progression from block-based coding to text-based programming using Small
+              Basic, enabling a seamless transition and building a strong foundation in coding principles.
+            </li>
+            <li>
+              Collaborated with instructors to design tailored learning pathways and specialized
+              educational programs, empowering students to delve deeper into advanced fields of
+              technology aligned with their interests.
+            </li>
+          </ul>
+        </section>
+
+      </section>
+
+    </main>
 
   </div>
-  <!-- #page-wrapper ends here -->
 
-  <!-- Link external JavaScript file -->
-  <script src="scripts.js"></script>
+  <footer>
+    <p>
+      All rights reserved: <a href="credits.html">Credits</a> &#169;
+      | Last Updated: September 21st, 2026
+    </p>
+  </footer>
+
+</div>
+
+<script src="scripts.js"></script>
 </body>
 </html>

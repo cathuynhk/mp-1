@@ -2,73 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="A website about...">
-  <!-- Link external CSS stylesheet at the top of any HTML file -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catalina Huynh's online resume - Computer Science student at Boston University specializing in Information Security and Cybersecurity.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Google Fonts section: leave empty with fallback in CSS similar to Times New Roman -->
-  <!-- <link href="" rel="stylesheet"> -->
-
-  <!-- Title must have two parts in child-parent formation; last tag in head -->
-  <title>Home | My Website</title>
+  <title>Home | Catalina Huynh</title>
 </head>
 
 <body>
-  <!-- Wrap everything in body with #page-wrapper -->
-  <div id="page-wrapper">
+<div id="page-wrapper">
 
-    <!-- Header starts here -->
-    <header>
-      <h1>Website Title</h1>
-      <p><em>Subtitle</em></p>
-      <!-- Button specifically labeled to change webpage theme from light to dark -->
-      <button id="theme-toggle" type="button">Switch to Dark Mode</button>
-    </header>
-    <!-- Header ends here -->
-
-    <!-- Wrap NAV and MAIN together in a single #container -->
-    <div id="container">
-
-      <!-- Navigation starts here -->
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="credits.html">Credits</a></li>
-        </ul>
-      </nav>
-      <!-- Navigation ends here -->
-
-      <!-- Main content starts here -->
-      <main>
-        <h1>Main Content Title</h1>
-
-        <!-- At least 6 internal webpage sections; can be left blank -->
-        <section id="section-1"><h2>Section 1</h2></section>
-        <section id="section-2"><h2>Section 2</h2></section>
-        <section id="section-3"><h2>Section 3</h2></section>
-        <section id="section-4"><h2>Section 4</h2></section>
-        <section id="section-5"><h2>Section 5</h2></section>
-        <section id="section-6"><h2>Section 6</h2></section>
-      </main>
-      <!-- Main content ends here -->
-
+  <header id="site-header">
+    <div id="banner">
+      <h1>Catalina Huynh</h1>
+      <p>My Online Resume</p>
     </div>
-    <!-- #container ends here -->
+  </header>
 
-    <!-- Footer starts here -->
-    <footer>
-      <p>All rights reserved: <a href="credits.html">Credits</a> &#169;</p>
-    </footer>
-    <!-- Footer ends here -->
+  <div id="container">
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="volunteering.html">Volunteering</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="credits.html">Credits</a></li>
+      </ul>
+      <button id="theme-toggle" type="button" aria-label="Switch to Dark Mode">
+        <span class="icon-sun" aria-hidden="true">&#9788;</span>
+        <svg class="icon-moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </nav>
+
+    <main>
+
+      <section class="hero-section">
+        <h2 class="page-title">Home</h2>
+
+        <div class="profile-row">
+          <div class="profile-image-wrap">
+            <img src="src/index-media/profile.png" alt="Portrait of Catalina Huynh">
+          </div>
+          <p class="bio">
+            My name is Catalina Huynh, and I am a full-time Computer Science Undergraduate at
+            Boston University. I would like to further my academic and professional involvement
+            in Information Security, CyberSecurity, and Health Informatics while I continue to
+            advance towards a Masters or a full-time Security position.
+          </p>
+        </div>
+
+        <p class="bio">
+          Welcome to my website! Here you will find my
+          <a href="education.html" class="bio-highlight">Educational</a> and my
+          <a href="experience.html" class="bio-highlight">Employment</a> history;
+          as well as other information that might be of interest to you.
+        </p>
+      </section>
+
+      <section class="rest-section">
+
+        <section id="about-me">
+          <h2>About Me</h2>
+          <p>
+            Hi there! My name is Catalina Huynh, but my friends call me Kitty :) I promise I'm
+            just as warm and approachable as Hello Kitty. My work is centered on keeping systems
+            secure, data crystal-clear, and operations running smoothly. Whether that's through
+            cybersecurity, network infrastructure, or turning complex spreadsheets into
+            actionable insights, I take pride in being the calm, reliable person to turn to.
+          </p>
+          <br>
+          <p>
+            Beyond the desk, I'm deeply passionate about the bigger picture&mdash;humanitarian and
+            economic issues, women's rights, and green renewable energy&mdash;because I believe that
+            technology and progress should always serve people and the planet. When I'm not
+            optimizing performance or securing data, you'll likely find me with a warm cup of tea,
+            a good book, cooking up something new in the kitchen, or jamming out to music.
+            (And yes, despite the nickname, I'm a huge cat lover&mdash;go figure! I have two cats 😸).
+          </p>
+          <br>
+          <p>
+            I'm always excited to connect, collaborate, and grow together, so don't be a stranger!
+          </p>
+        </section>
+
+        <br>
+
+        <section id="contact-info">
+          <h2>Contact Information</h2>
+          <p>
+            Boston, MA | P: +1 (617) 606-1309 |
+            cathuynh.k@gmail.com | linkedin.com/in/cathuynhk/
+          </p>
+        </section>
+
+      </section>
+
+    </main>
 
   </div>
-  <!-- #page-wrapper ends here -->
 
-  <!-- Link external JavaScript file -->
-  <script src="scripts.js"></script>
+  <footer>
+    <p>
+      All rights reserved: <a href="credits.html">Credits</a> &#169;
+      | Last Updated: September 21st, 2026
+    </p>
+  </footer>
+
+</div>
+
+<script src="scripts.js"></script>
 </body>
 </html>

@@ -1,182 +1,717 @@
-/* ===============================
-   CSS RESET AND GLOBAL BOX MODEL
-   =============================== */
+/* ============================================================
+   GOOGLE FONTS (Playfair Display + Quicksand linked in <head>)
+   ============================================================ */
+
+/* ============================================================
+   GLOBAL RESET
+   ============================================================ */
 * {
   margin: 0;
   box-sizing: border-box;
 }
 
-/* ===============================
-   PAGE WRAPPER: CENTERS AND CONSTRAINS PAGE
-   =============================== */
+/* ============================================================
+   BODY / BASE TYPOGRAPHY
+   ============================================================ */
+body {
+  font-family: "Quicksand", "Times New Roman", Times, serif;
+  font-size: calc(15px + 0.35vw);
+  line-height: 1.65;
+  color: #1f3d5c;
+  background-color: #dceaf5;
+}
+
+/* ============================================================
+   PAGE WRAPPER — full-page grid (nav 30%, content 70%)
+   ============================================================ */
 #page-wrapper {
   width: 80%;
   margin: 0 auto;
-  background-color: antiquewhite;
-}
-
-/* ===============================
-   UNIFORM BACKGROUND COLORS FOR MAIN TAGS
-   =============================== */
-header,
-nav,
-main,
-footer {
-  background-color: #f5f0e6; /* Choose a uniform palette */
-  color: #222;
-}
-
-/* ===============================
-   CONTAINER: WRAPS NAV AND MAIN
-   =============================== */
-#container {
-  width: 100%;
-  display: flex;
-  flex-direction: row; /* Use column to stack nav vertically */
-  /* Put height stuff here so the page stretches vertically, not horizontally */
+  background-color: #f4f9fd;
   min-height: 100vh;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-areas:
+    "nav header"
+    "nav hero"
+    "nav rest"
+    "footer footer";
+  grid-template-rows: auto auto 1fr auto;
 }
 
-/* ===============================
-   NAV AND MAIN WIDTHS
-   =============================== */
-nav {
-  width: 30%;
+/* ============================================================
+   HEADER + BANNER
+   ============================================================ */
+header#site-header {
+  grid-area: header;
+  position: relative;
+  background-image: url("src/index-media/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 32vh;
+  padding: calc(1rem + 2vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 4px solid #7fb3d5;
 }
 
-main {
-  width: 70%;
-  height: 100vh; /* Hint: increase height of main to 100vh */
-  padding: 1rem;
+header#site-header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(31, 61, 92, 0.45);
+  z-index: 0;
 }
 
-/* ===============================
-   TYPOGRAPHY AND FONT FALLBACK
-   =============================== */
-body {
-  /* Google Font section left empty; fallback similar to Times New Roman */
-  font-family: /* "Google Font Name", */ "Times New Roman", Times, serif;
-  font-size: calc(16px + 0.5vw); /* Use calc() for font-sizes */
-  line-height: 1.5;
-  background-color: antiquewhite; /* Avoid white space at bottom */
-}
-
-/* ===============================
-   HEADER, NAV, MAIN, FOOTER SPACING
-   =============================== */
-header,
-nav,
-main,
-footer {
-  padding: 1.5rem;
-  margin: 0;
-}
-
-footer {
-  margin-top: auto;
+#banner {
+  position: relative;
+  z-index: 1;
   text-align: center;
 }
 
-/* ===============================
-   NAVIGATION STYLING
-   =============================== */
+#banner h1 {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-size: calc(26px + 2.2vw);
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(31, 61, 92, 0.9);
+}
+
+#banner p {
+  font-size: calc(14px + 0.7vw);
+  font-weight: 700;
+  color: #eaf4fb;
+  text-shadow: 0 2px 8px rgba(31, 61, 92, 0.9);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   #container and main — display: contents
+   ============================================================ */
+#container,
+main {
+  display: contents;
+}
+
+/* ============================================================
+   NAV — vertical sidebar, sticky, small grid buttons
+   ============================================================ */
+nav {
+  grid-area: nav;
+  container-type: inline-size;
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #cfe6f5;    /* light blue = padding color */
+  padding: 6px;
+  display: grid;
+  grid-template-rows: repeat(9, 1fr);
+  gap: 6px;
+}
+
 nav ul {
-  list-style: none; /* Remove bullets */
-  padding-left: 0;  /* Remove default indentation */
+  display: contents;            /* 8 <li>s become direct grid items */
 }
 
 nav li {
-  display: inline-block; /* Arrange horizontally */
-  border-right: 1px solid #999; /* Button-like separation */
-  padding: 0.5rem 1rem;
+  display: flex;
+  min-height: 0;
+  padding: 0;
+  border: none;
+  text-align: center;
 }
 
 nav a {
-  text-decoration: none; /* Remove underline */
-  text-transform: uppercase; /* Transform letters */
-  font-family: /* "Google Font Name", */ "Times New Roman", Times, serif;
-  font-size: calc(0.9rem + 0.2vw);
-  font-weight: bold;
-  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Quicksand", "Times New Roman", Times, serif;
+  font-size: clamp(0.6rem, 5cqw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  white-space: nowrap;
+  text-align: center;
+  color: #ffffff;
+  background-color: #4a7fa5;    /* darker than nav's #cfe6f5 */
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
 }
 
-/* ===============================
+nav a:hover {
+  background-color: #2f5f85;
+}
+
+/* ============================================================
+   HERO + REST SECTIONS
+   ============================================================ */
+.hero-section {
+  grid-area: hero;
+  padding: calc(1rem + 1.2vw);
+  padding-bottom: calc(0.75rem + 0.8vw);
+  background-color: #f4f9fd;
+  font-size: calc(15px + 0.4vw);
+}
+
+.rest-section {
+  grid-area: rest;
+  padding: calc(1rem + 1.2vw);
+  padding-top: 0;                  /* kills the extra visible gap */
+  background-color: #f4f9fd;
+}
+
+/* ============================================================
+   HEADINGS / TEXT INSIDE MAIN
+   ============================================================ */
+.page-title {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-size: calc(24px + 1.6vw);
+  font-weight: 700;
+  color: #1f3d5c;
+  border-bottom: 3px solid #f2b8cd;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+main h3 {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-size: calc(17px + 0.8vw);
+  color: #2f5f85;
+  margin-bottom: 0.35rem;
+}
+
+main h4 {
+  font-size: calc(14px + 0.4vw);
+  color: #4a7fa5;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+main p {
+  margin-bottom: 0.6rem;
+}
+
+main ul,
+main ol {
+  padding-left: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+main li {
+  margin-bottom: 0.4rem;
+}
+
+main a {
+  color: #4a7fa5;
+}
+
+main a:hover {
+  color: #b3567f;
+}
+
+/* ============================================================
    RESPONSIVE IMAGES
-   =============================== */
+   ============================================================ */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* ===============================
-   LIGHT/DARK MODE THEME
-   =============================== */
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  grid-area: footer;
+  background-color: #1f3d5c;
+  color: #eaf4fb;
+  text-align: center;
+  padding: 1.25rem;
+  font-size: calc(12px + 0.28vw);
+}
+
+footer a {
+  color: #f2b8cd;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   THEME TOGGLE BUTTON
+   ============================================================ */
+#theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 0;
+  background-color: #4a7fa5;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: background-color 0.2s ease;
+}
+
+#theme-toggle:hover {
+  background-color: #2f5f85;
+}
+
+/* Sun — spiky rays (&#9728;); fills the button height */
+#theme-toggle .icon-sun {
+  font-size: clamp(1.2rem, 6.5vh, 2.4rem);
+  line-height: 1;
+  color: transparent;
+  text-shadow: 0 0 0 #ffffff;
+}
+
+/* Moon — matches the sun's sizing */
+#theme-toggle .icon-moon {
+  width: clamp(1.2rem, 6.5vh, 2.4rem);
+  height: clamp(1.2rem, 6.5vh, 2.4rem);
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#theme-toggle .icon-sun  { display: inline-block; }
+#theme-toggle .icon-moon { display: none; }
+
+body.dark-mode #theme-toggle .icon-sun  { display: none; }
+body.dark-mode #theme-toggle .icon-moon { display: inline-block; }
+
+/* ============================================================
+   HOME PAGE: PROFILE PICTURE + FIRST BIO PARAGRAPH
+   ------------------------------------------------------------
+   DESKTOP (nav vertical):
+     - .profile-row fills the hero column, aligning both
+       children to the same height (the bio's height).
+     - .profile-image-wrap = LEFT 50% of the row.
+     - Picture sits 10% from the wrap's left edge and is at
+       most 80% wide → 10% empty on the right.
+     - width/height auto keeps the natural aspect ratio, so
+       the border hugs the picture exactly (no crop).
+     - .profile-row .bio = RIGHT 40% of the row.
+   ============================================================ */
+.profile-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+/* Picture side: 50% of the row */
+.profile-image-wrap {
+  flex: 0 0 50%;
+  width: 50%;
+  position: relative;              /* anchor for the absolute picture */
+}
+
+/* Picture: 10% from the left, at most 80% wide → 10% on the right.
+   width/height auto keeps the natural aspect ratio → no cropping,
+   and the border hugs the rendered picture exactly. */
+.profile-image-wrap img {
+  position: absolute;
+  top: 50%;
+  left: 10%;                       /* left padding */
+  transform: translateY(-50%);
+  max-width: 80%;                  /* leaves 10% on the right */
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 4px solid #a8cfe8;
+}
+
+/* Bio paragraph: 40% of the row */
+.profile-row .bio {
+  flex: 0 0 40%;
+  width: 40%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;                      /* the 10% right space lives in the wrap */
+}
+
+/* Bio paragraphs are a step larger than the rest of the page */
+.bio {
+  font-size: 1.1em;
+}
+
+/* ============================================================
+   "Educational" / "Employment" — saturated bright blue
+   ============================================================ */
+.bio-highlight {
+  font-style: italic;
+  font-weight: 800;
+  text-decoration: underline;
+  color: #0a66c2;
+}
+
+.bio-highlight:hover {
+  color: #0d4d8f;
+}
+
+/* ============================================================
+   JAVASCRIPT CALCULATOR (CHERRY BLOSSOM THEME)
+   ============================================================ */
+#calculator {
+  background: linear-gradient(180deg, #fff5f8 0%, #ffe6ef 100%);
+  border: 2px solid #f2b8cd;
+  border-radius: 18px;
+  padding: calc(1rem + 1vw);
+  margin-top: 2rem;
+  box-shadow: 0 6px 18px rgba(200, 120, 150, 0.25);
+}
+
+#calculator h3 {
+  color: #b3567f;
+}
+
+.calc-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.calc-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 160px;
+}
+
+.calc-field label {
+  font-size: calc(11px + 0.25vw);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #b3567f;
+  margin-bottom: 0.3rem;
+}
+
+.calc-field input {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  font-family: "Quicksand", "Times New Roman", Times, serif;
+  font-size: calc(13px + 0.3vw);
+  color: #1f3d5c;
+  background-color: #ffffff;
+  border: 2px solid #f2b8cd;
+  border-radius: 10px;
+}
+
+.calc-field input:focus {
+  outline: none;
+  border-color: #e8a0b8;
+}
+
+.calc-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.calc-buttons button {
+  flex: 1 1 70px;
+  padding: 0.65rem 0.5rem;
+  font-family: "Quicksand", "Times New Roman", Times, serif;
+  font-size: calc(13px + 0.3vw);
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #e8a0b8;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.calc-buttons button:hover {
+  background-color: #d487a3;
+}
+
+.calc-output {
+  background-color: #ffffff;
+  border: 2px dashed #f2b8cd;
+  border-radius: 12px;
+  padding: 0.85rem;
+  text-align: center;
+  min-height: 60px;
+}
+
+#output {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-size: calc(18px + 0.8vw);
+  font-weight: 800;
+  color: #b3567f;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.negative {
+  color: #d32f2f !important;
+}
+
+/* ============================================================
+   DARK MODE THEME
+   ============================================================ */
 body.dark-mode {
-  background-color: #222;
-  color: #f5f5f5;
+  background-color: #101a24;
+  color: #e6f0f7;
 }
 
 body.dark-mode #page-wrapper {
-  background-color: #222;
-  color: #f5f5f5;
+  background-color: #16222e;
+  color: #e6f0f7;
 }
 
-body.dark-mode header,
-body.dark-mode nav,
-body.dark-mode main,
-body.dark-mode footer {
-  background-color: #333;
-  color: #f5f5f5;
+body.dark-mode .hero-section,
+body.dark-mode .rest-section {
+  background-color: #16222e;
+}
+
+body.dark-mode nav {
+  background-color: #1d2d3d;
 }
 
 body.dark-mode nav a {
-  color: #9cf;
+  color: #ffffff;
+  background-color: #4a7fa5;
+}
+body.dark-mode nav a:hover {
+  background-color: #2f5f85;
 }
 
-/* ===============================
+body.dark-mode .page-title,
+body.dark-mode main h3,
+body.dark-mode main h4 {
+  color: #cfe6f5;
+}
+
+body.dark-mode .bio-highlight {
+  color: #58a6ff;
+}
+body.dark-mode .bio-highlight:hover {
+  color: #79b8ff;
+}
+
+body.dark-mode footer {
+  background-color: #0b131a;
+  color: #cfe6f5;
+}
+
+body.dark-mode #calculator {
+  background: linear-gradient(180deg, #2a1d24 0%, #3a2630 100%);
+  border-color: #b3567f;
+}
+
+body.dark-mode .calc-output {
+  background-color: #1d2d3d;
+  border-color: #b3567f;
+}
+
+/* ============================================================
    MEDIA QUERIES
-   =============================== */
-@media screen and (max-width: 768px) {
-  #container {
-    flex-direction: column; /* Stack nav and main */
+   ============================================================ */
+
+/* ---- 750px and narrower ----
+   Nav becomes a 3×3 grid; profile row stacks vertically.
+   Every desktop offset (position, top, left, transform) is
+   fully reset so the picture never floats onto the nav. */
+@media screen and (max-width: 750px) {
+
+  #page-wrapper {
+    display: flex;
+    flex-direction: column;
   }
 
-  nav,
-  main {
+  nav {
+    container-type: normal;
+    position: static;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    width: 100%;
+    padding: 0.6rem;
+    background-color: #cfe6f5;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 6px;
+  }
+
+  nav ul { display: contents; }
+
+  nav li {
+    display: flex;
+    min-height: 0;
+    padding: 0;
+    border: none;
+  }
+
+  nav a {
+    width: 100%;
+    height: 100%;
+    padding: 0.65rem 0.35rem;
+    font-size: calc(11px + 0.3vw);
+    font-weight: 700;
+    white-space: normal;
+    border-radius: 6px;
+    background-color: #4a7fa5;
+    color: #ffffff;
+  }
+
+  #theme-toggle {
+    width: 100%;
+    height: 100%;
+    padding: 0.65rem 0.35rem;
+    margin: 0;
+    background-color: #4a7fa5;
+    border: none;
+    border-radius: 6px;
+  }
+
+  #theme-toggle .icon-sun {
+    font-size: 1.35rem;
+    color: transparent;
+    text-shadow: 0 0 0 #ffffff;
+  }
+
+  #theme-toggle .icon-moon {
+    width: 1.35rem;
+    height: 1.35rem;
+    stroke: #ffffff;
+  }
+
+  #theme-toggle:hover {
+    background-color: #2f5f85;
+  }
+
+  header#site-header {
+    text-align: center;
+    min-height: 26vh;
+    padding: calc(1rem + 1.5vw);
+  }
+
+  .hero-section,
+  .rest-section {
+    padding: calc(0.9rem + 1.5vw);
+  }
+  .rest-section { padding-top: 0; }
+
+  /* Stack picture on top of the bio; each takes full width */
+  .profile-row {
+    flex-direction: column;
+    align-items: stretch;
     width: 100%;
   }
 
-  header,
-  nav,
-  main,
-  footer {
+  /* Square block with 10% padding on each side */
+  .profile-image-wrap {
+    position: static;
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 10%;
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Reset every desktop positioning offset, including the
+     translateY(-50%) that was lifting the image onto the nav. */
+  .profile-image-wrap img {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;              /* <-- stops the squished overlap */
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .profile-row .bio {
+    flex: 1 1 auto;
+    width: 100%;
+    padding: 0;
+  }
+
+  #calculator {
     padding: 1rem;
   }
 
-  body {
-    font-size: calc(14px + 0.5vw);
+  .calc-buttons button {
+    flex: 1 1 45%;
   }
 }
 
+/* ---- 520px and narrower ---- */
 @media screen and (max-width: 520px) {
+
   #page-wrapper {
     width: 94%;
   }
 
-  header,
-  nav,
-  main,
+  header#site-header {
+    min-height: 22vh;
+  }
+
+  #banner h1 {
+    font-size: calc(22px + 2vw);
+  }
+
+  .hero-section,
+  .rest-section {
+    padding: 0.85rem;
+  }
+  .rest-section { padding-top: 0; }
+
+  nav {
+    padding: 0.5rem;
+    gap: 5px;
+  }
+
+  nav a {
+    font-size: calc(10px + 0.3vw);
+    padding: 0.55rem 0.2rem;
+  }
+
+  #theme-toggle {
+    padding: 0.55rem 0.2rem;
+  }
+
+  main h3 {
+    font-size: calc(15px + 0.8vw);
+  }
+
+  .calc-field,
+  .calc-buttons button {
+    flex: 1 1 100%;
+  }
+
   footer {
-    padding: 0.75rem;
-  }
-
-  nav li {
-    display: block;
-    border-right: none;
-    border-bottom: 1px solid #999;
-  }
-
-  body {
-    font-size: calc(13px + 0.5vw);
+    padding: 0.9rem;
   }
 }
